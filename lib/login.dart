@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mentium_app/Choose_a_Wallet_to_Import.dart';
+import 'package:mentium_app/legacy_notice.dart';
 
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
@@ -11,6 +13,7 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[100],
       body: Container(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -72,7 +75,12 @@ class _LoginState extends State<Login> {
                   height: 10,
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Legacy_Notice()),
+                    );
+                  },
                   child: Text(
                     'Create a new Mentium wallet',
                     style: TextStyle(
@@ -85,7 +93,13 @@ class _LoginState extends State<Login> {
                   height: 10,
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => Choose_a_Wallet_to_Import()),
+                    );
+                  },
                   child: Text(
                     'Import an existing wallet',
                     style: TextStyle(

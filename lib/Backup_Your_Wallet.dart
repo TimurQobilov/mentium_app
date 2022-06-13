@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:mentium_app/This_Is_Your_Secret_Phrase.dart';
 
 class Backup_Your_Wallet extends StatefulWidget {
   const Backup_Your_Wallet({Key? key}) : super(key: key);
@@ -89,7 +90,14 @@ class _Backup_Your_WalletState extends State<Backup_Your_Wallet> {
                           height: 20,
                         ),
                         ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      This_Is_Your_Secret_Phrase()),
+                            );
+                          },
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [Text('Skip Backup')],

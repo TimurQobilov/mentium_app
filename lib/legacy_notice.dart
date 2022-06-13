@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mentium_app/Secure_Your_Mentium_Wallet.dart';
+import 'package:mentium_app/login.dart';
 
 class Legacy_Notice extends StatefulWidget {
   const Legacy_Notice({Key? key}) : super(key: key);
@@ -28,7 +30,12 @@ class _Legacy_NoticeState extends State<Legacy_Notice> {
                     icon: const Icon(Icons.arrow_back_ios_new),
                     color: Colors.white,
                     iconSize: 15,
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Login()),
+                      );
+                    },
                   ),
                 ),
               ],
@@ -83,7 +90,12 @@ class _Legacy_NoticeState extends State<Legacy_Notice> {
                   height: 20,
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Secure_Your()),
+                    );
+                  },
                   child: Text('Accept'),
                   style: ButtonStyle(
                     shape: MaterialStateProperty.all(

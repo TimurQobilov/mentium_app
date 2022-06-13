@@ -16,9 +16,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Mentium.io',
-      // theme: ThemeData(
-      //   primarySwatch: Colors.purple,
-      // ),
+      theme: ThemeData(
+        primarySwatch: Colors.purple,
+      ),
       home: const Login(),
     );
   }

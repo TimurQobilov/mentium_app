@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mentium_app/Passcode.dart';
+import 'package:mentium_app/legacy_notice.dart';
 
 class Secure_Your extends StatefulWidget {
   const Secure_Your({Key? key}) : super(key: key);
@@ -28,7 +30,13 @@ class _Secure_YourState extends State<Secure_Your> {
                     icon: const Icon(Icons.arrow_back_ios_new),
                     color: Colors.white,
                     iconSize: 15,
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => Legacy_Notice()),
+                      );
+                    },
                   ),
                 ),
               ],
@@ -86,7 +94,12 @@ class _Secure_YourState extends State<Secure_Your> {
                   height: 10,
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Passcode()),
+                    );
+                  },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
